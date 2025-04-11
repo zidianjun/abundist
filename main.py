@@ -33,7 +33,7 @@ def plot_maps():
 
     ax = plt.subplot(221)
     galaxy = DirGal(gal_name, instr, diag='nitrogen', map_mode=True)
-    im = ax.imshow(bin_map(galaxy.Z[cy-r:cy+r, cx-r:cx+r]), origin='lower',
+    im = ax.imshow(galaxy.Z[cy-r:cy+r, cx-r:cx+r], origin='lower',
         vmin=5.9, vmax=7.1, cmap=plt.cm.RdYlBu_r, extent=[-ext, ext, -ext, ext])
     ax.annotate('12 + log(N/H)', xy=(-28, 24), fontsize=20)
     ax.tick_params(labelbottom=False, bottom=False, labelleft=False, left=False)
@@ -46,7 +46,7 @@ def plot_maps():
 
     ax = plt.subplot(222)
     galaxy = DirGal(gal_name, instr, diag='oxygen', map_mode=True)
-    im = ax.imshow(bin_map(galaxy.Z[cy-r:cy+r, cx-r:cx+r]), origin='lower',
+    im = ax.imshow(galaxy.Z[cy-r:cy+r, cx-r:cx+r], origin='lower',
         vmin=7.7, vmax=8.7, cmap=plt.cm.RdYlBu_r, extent=[-ext, ext, -ext, ext])
     ax.annotate('12 + log(O/H)', xy=(-28, 24), fontsize=20)
     ax.tick_params(labelbottom=False, bottom=False, labelleft=False, left=False)
@@ -58,7 +58,7 @@ def plot_maps():
     cbar.ax.tick_params(labelsize=20)
 
     ax = plt.subplot(223)
-    im = ax.imshow(bin_map(galaxy.t_SIII[cy-r:cy+r, cx-r:cx+r]), origin='lower',
+    im = ax.imshow(galaxy.t_SIII[cy-r:cy+r, cx-r:cx+r], origin='lower',
         vmin=.8, vmax=2.1, cmap=plt.cm.coolwarm, extent=[-ext, ext, -ext, ext])
     ax.annotate('Electron temperature', xy=(-28, 24), fontsize=20)
     ax.tick_params(labelbottom=False, bottom=False, labelleft=False, left=False)
@@ -71,7 +71,7 @@ def plot_maps():
 
     ax = plt.subplot(224)
     galaxy = DirGal(gal_name, instr, diag='sulphur', map_mode=True)
-    im = ax.imshow(bin_map(galaxy.Z[cy-r:cy+r, cx-r:cx+r]), origin='lower',
+    im = ax.imshow(galaxy.Z[cy-r:cy+r, cx-r:cx+r], origin='lower',
         vmin=5.9, vmax=7.1, cmap=plt.cm.RdYlBu_r, extent=[-ext, ext, -ext, ext])
     ax.annotate('12 + log(S/H)', xy=(-28, 24), fontsize=20)
     ax.tick_params(labelbottom=False, bottom=False, labelleft=False, left=False)
