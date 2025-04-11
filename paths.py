@@ -1,5 +1,5 @@
 
-proj_path = '/Users/zidianjun/Desktop/lzf/research/abundist/'
+proj_path = './'
 
 obj_path = proj_path + 'data/'
 fits_path = obj_path + 'fits/'
